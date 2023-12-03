@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="studentsapp">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>studentsapp</title>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    const serviceWorkerVersion = null;
+  </script>
+  <!-- Firebase initialization script -->
+  <script src="https://www.gstatic.com/firebasejs/latest/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/latest/firebase-analytics.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/latest/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/latest/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBXD66xw5cfrOa_h0BPS5seglQkJzDs8ho",
+  authDomain: "studentsapp-39a91.firebaseapp.com",
+  databaseURL: "https://studentsapp-39a91-default-rtdb.firebaseio.com",
+  projectId: "studentsapp-39a91",
+  storageBucket: "studentsapp-39a91.appspot.com",
+  messagingSenderId: "465223110265",
+  appId: "1:465223110265:web:fd43677f16d8e5f0af8ea8",
+  measurementId: "G-B3R4VTJHJ0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <!-- Flutter initialization script -->
+  <script src="flutter.js" defer></script>
+  <script>
+    window.addEventListener('load', function (ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: async function (engineInitializer) {
+          let appRunner = await engineInitializer.initializeEngine({
+            hostElement: document.querySelector("#flutter_app"),
+            renderer: "canvaskit"
+          });
+          appRunner.runApp();
+        }
+      });
+    });
+  </script>
+</head>
+
+<body></body>
+
+</html>
